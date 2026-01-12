@@ -78,6 +78,8 @@ Training dataset used for LoRA fine-tuning.
 ### 7. `transformers_env.yml`
 Conda env used during initial analysis
 
+### 8. `launch_code_gpu.slurm`
+launch job on GPU on UNIL Curnagl cluster
 
 ---
 

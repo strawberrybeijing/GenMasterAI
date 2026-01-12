@@ -6,18 +6,19 @@ This repository contains scripts to benchmark the **raw Phi-3 model**, fine-tune
 
 All dependencies are managed using Conda:
 
-conda env create -f transformers_env.yml
-conda activate transformers_env
+- conda env create -f transformers_env.yml
+- conda activate transformers_env
 
 ## Running on GPU (UNIL Curnagl Cluster)
 
-1. Interactive GPU session: srun --partition=gpu --gres=gpu:1 --cpus-per-task=4 --mem 8G --time=3:00:00 --pty bash 
-conda activate transformers_env
-python xxxx.py
+1. Interactive GPU session:
+- srun --partition=gpu --gres=gpu:1 --cpus-per-task=4 --mem 8G --time=3:00:00 --pty bash 
+- conda activate transformers_env
+- python xxxx.py
 
 2.Batch job submission
-A Slurm submission script is provided: launch_code_gpu.slurm
-sbatch launch_code_gpu.slurm
+- A Slurm submission script is provided: launch_code_gpu.slurm
+- sbatch launch_code_gpu.slurm
 
 
 ## Files Overview

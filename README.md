@@ -17,7 +17,7 @@ All dependencies are managed using Conda:
 - python xxxx.py
 
 2.Batch job submission
-- A Slurm submission script is provided: launch_code_gpu.slurm
+- A Slurm submission script is provided: **launch_code_gpu.slurm**
 - sbatch launch_code_gpu.slurm
 
 

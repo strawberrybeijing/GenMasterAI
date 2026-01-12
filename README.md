@@ -2,6 +2,24 @@
 
 This repository contains scripts to benchmark the **raw Phi-3 model**, fine-tune it using **QLoRA**, and evaluate the model **after LoRA adaptation** on different question sets, including obesity-related variants.
 
+## Environment Setup
+
+All dependencies are managed using Conda:
+
+conda env create -f transformers_env.yml
+conda activate transformers_env
+
+## Running on GPU (UNIL Curnagl Cluster)
+
+1. Interactive GPU session: srun --partition=gpu --gres=gpu:1 --cpus-per-task=4 --mem 8G --time=3:00:00 --pty bash 
+conda activate transformers_env
+python xxxx.py
+
+2.Batch job submission
+A Slurm submission script is provided: launch_code_gpu.slurm
+sbatch launch_code_gpu.slurm
+
+
 ## Files Overview
 
 ### 1. `raw_model_benchmark_phi3_20questions_20260108_JZ.py`
@@ -55,6 +73,10 @@ Training dataset used for LoRA fine-tuning.
 - JSONL-format dataset  
 - Used as input for the QLoRA training script  
 - Contains the examples used to adapt the Phi-3 model
+
+### 7. `transformers_env.yml`
+Conda env used during initial analysis
+
 
 ---
 
